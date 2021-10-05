@@ -16,7 +16,7 @@ div > div {
   width: 80px;
   height: 80px;
   position: relative;
-  background: black;
+  background: #000;
   margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -28,9 +28,9 @@ div > div:nth-child(1)::before {
   letter-spacing: 4.7rem;
   width: 640px;
   height: 20px;
-  color: grey;
+  color: #2e2e2e;
   bottom: 80px;
-  background: lawngreen;
+  background: #7cfc00;
 }
 
 div > div:nth-child(even) {
@@ -49,56 +49,56 @@ div > div::after, div > div::before{
     position: absolute;
 }
 div > div:nth-child(even)::after {
-  background: black;
+  background: #000;
   top: 80px;
 }
 
 div > div:nth-child(n + 9):nth-child(odd)::before {
-  background: black;
+  background: #000;
   bottom: 80px;
 }
 
 div > div:nth-child(n + 9):nth-child(odd) {
-  background: white;
+  background: #fff;
 }
 div > div:nth-child(n + 9):nth-child(even) {
-  background: black;
+  background: #000;
 }
 
 div > div:nth-child(n + 9):nth-child(odd)::after {
-  background: black;
+  background: #000;
   top: 80px;
 }
 div > div:nth-child(n + 9):nth-child(even)::after {
-  background: white;
+  background: #fff;
   top: 80px;
 }
 
 div > div:nth-child(n + 17):nth-child(odd)::before {
-  background: white;
+  background: #fff;
   bottom: 80px;
 }
 
 div > div:nth-child(n + 17):nth-child(even)::before {
-  background: black;
+  background: #000;
   bottom: 80px;
 }
 
 div > div:nth-child(n + 17):nth-child(odd) {
-  background: black;
+  background: #000;
   margin-bottom: 160px;
 }
 div > div:nth-child(n + 17):nth-child(even) {
-  background: white;
+  background: #fff;
   margin-bottom: 160px;
 }
 
 div > div:nth-child(n + 17):nth-child(odd)::after {
-  background: white;
+  background: #fff;
   top: 80px;
 }
 div > div:nth-child(n + 17):nth-child(even)::after {
-  background: black;
+  background: #000;
   top: 80px;
 }
 
@@ -109,23 +109,22 @@ div > div:nth-child(2)::before {
   letter-spacing: 4.7rem;
   width: 640px;
   height: 20px;
-  color: grey;
+  color: #2e2e2e;
   top: 640px;
-  background: lawngreen;
+  background: #7cfc00;
   left: -80px;
-  font-size: larger;
+  font-size: larger; /*  add font-size in PX, delete larger  */
 }
 
 
 div > div:nth-child(3)::before {
   content: "ABCDEFGH";
-  
   letter-spacing: 4.7rem;
   width: 20px;
   height: 680px;
-  color: grey;
+  color: #2e2e2e;
   top: -20px;
-  background: lawngreen;
+  background: #7cfc00;
   left: -180px;
 }
 
@@ -133,8 +132,8 @@ div > div:nth-child(4)::before {
   letter-spacing: 4.7rem;
   width: 20px;
   height: 680px;
-  color: grey;
+  color: 2e2e2e;
   top: -20px;
-  background: lawngreen;
+  background: #7cfc00;
   left: 400px;
 }
