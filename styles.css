@@ -1,228 +1,140 @@
 * {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    }
-    
-    body > div {
-    
- 
-    width: 640px;
-    height: 640px;
-    margin: 20px;
-    }
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
 
-    body > div {
-    
- 
-        width: 640px;
-        height: 640px;
-        margin: 20px;
-       
-        }
-    
-    div > div{
-    float: left;
+body > div {
+  width: 640px;
+  height: 640px;
+  margin: 20px;
+}
+
+
+div > div {
+  float: left;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  background: black;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+
+div > div:nth-child(1)::before {
+  position: absolute;
+  content: "ABCDEFGH";
+  letter-spacing: 4.7rem;
+  width: 640px;
+  height: 20px;
+  color: grey;
+  bottom: 80px;
+  background: lawngreen;
+}
+
+div > div:nth-child(even) {
+  background: #fff; 
+}
+
+div > div:nth-child(odd) {
+  background: #000;
+}
+
+div > div::after, div > div::before{
+    content: "";
+    display: block;
     width: 80px;
     height: 80px;
-    position: relative;
-    background-color: black;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    }
-
-    /* YES!!! PERFECT! */
-    div > div:nth-child(1)::before{
     position: absolute;
-    content: "ABCDEFGH";
-    letter-spacing: 4.7rem;
-    width: 640px;
-    height: 20px;
-    color: grey;
-    bottom: 80px;
-    background-color: lawngreen;
-    }
-    
-    div > div:nth-child(n+2):nth-child(even){/* n+2? pls Read this code) */
-        
-        width: 80px;
-        height: 80px;
-       
-        background-color: white; /* background-color = background, and use #fff color */
-        margin-top: 80px;
-        margin-bottom: 80px;
-        }
+}
+div > div:nth-child(even)::after {
+  background: black;
+  top: 80px;
+}
 
-        div > div:nth-child(n+2):nth-child(odd){/* n+2? pls Read this code) */
-            
-            width: 80px;
-            height: 80px;
-          
-            background-color: black;
-            margin-top: 80px;
-            margin-bottom: 80px;
-            }
+div > div:nth-child(n + 9):nth-child(odd)::before {
+  background: black;
+  bottom: 80px;
+}
 
-            div > div:nth-child(even)::after{
-                content: "";
-                display: block;
-                width: 80px;
-                height: 80px;
-               
-                background-color: black;
-                position: absolute;
-                top: 80px;
-                }
+div > div:nth-child(n + 9):nth-child(odd) {
+  background: white;
+}
+div > div:nth-child(n + 9):nth-child(even) {
+  background: black;
+}
 
-                div > div:nth-child(n+9):nth-child(odd)::before{
-                    content: "";
-                    display: block;
-                    width: 80px;
-                    height: 80px;
-                   
-                    background-color: black;
-                    position: absolute;
-                    bottom: 80px;
-                    }
+div > div:nth-child(n + 9):nth-child(odd)::after {
+  background: black;
+  top: 80px;
+}
+div > div:nth-child(n + 9):nth-child(even)::after {
+  background: white;
+  top: 80px;
+}
 
-                    div > div:nth-child(n+9):nth-child(odd){
-                       width: 80px;
-                        height: 80px;
-                        position: relative;
-                        background-color: white;
-                        margin-top: 80px;
-                        margin-bottom: 80px;
-                        }
-                        div > div:nth-child(n+9):nth-child(even){
-                            width: 80px;
-                             height: 80px;
-                             position: relative;
-                             background-color: black;
-                             margin-top: 80px;
-                             margin-bottom: 80px;
-                             }
-     
-                     div > div:nth-child(n+9):nth-child(odd)::after{
-                     content: "";
-                     display: block;
-                     width: 80px;
-                     height: 80px;
-                               
-                     background-color: black;
-                     position: absolute;
-                     top: 80px;
-                                }
-                                div > div:nth-child(n+9):nth-child(even)::after{
-                                    content: "";
-                                    display: block;
-                                    width: 80px;
-                                    height: 80px;
-                                              
-                                    background-color: white;
-                                    position: absolute;
-                                    top: 80px;
-                                               }
+div > div:nth-child(n + 17):nth-child(odd)::before {
+  background: white;
+  bottom: 80px;
+}
+
+div > div:nth-child(n + 17):nth-child(even)::before {
+  background: black;
+  bottom: 80px;
+}
+
+div > div:nth-child(n + 17):nth-child(odd) {
+  background: black;
+  margin-bottom: 160px;
+}
+div > div:nth-child(n + 17):nth-child(even) {
+  background: white;
+  margin-bottom: 160px;
+}
+
+div > div:nth-child(n + 17):nth-child(odd)::after {
+  background: white;
+  top: 80px;
+}
+div > div:nth-child(n + 17):nth-child(even)::after {
+  background: black;
+  top: 80px;
+}
 
 
-              div > div:nth-child(n+17):nth-child(odd)::before{
-                       content: "";
-                       display: block;
-                       width: 80px;
-                       height: 80px;            
-                        background-color: white;
-                        position: absolute;
-                        bottom: 80px;
-                           }
+div > div:nth-child(2)::before {
+  
+  content: "12345678";
+  letter-spacing: 4.7rem;
+  width: 640px;
+  height: 20px;
+  color: grey;
+  top: 640px;
+  background: lawngreen;
+  left: -80px;
+  font-size: larger;
+}
 
-                           div > div:nth-child(n+17):nth-child(even)::before{
-                            content: "";
-                            display: block;
-                            width: 80px;
-                            height: 80px;            
-                             background-color: black;
-                             position: absolute;
-                             bottom: 80px;
-                                }
 
-                                div > div:nth-child(n+17):nth-child(odd){
-                                    width: 80px;
-                                     height: 80px;
-                                     position: relative;
-                                     background-color: black;
-                                     margin-top: 80px;
-                                     margin-bottom: 160px;
-                                     }
-                                     div > div:nth-child(n+17):nth-child(even){
-                                         width: 80px;
-                                          height: 80px;
-                                          position: relative;
-                                          background-color: white;
-                                          margin-top: 80px;
-                                          margin-bottom: 160px;
-                                          }
+div > div:nth-child(3)::before {
+  content: "ABCDEFGH";
+  
+  letter-spacing: 4.7rem;
+  width: 20px;
+  height: 680px;
+  color: grey;
+  top: -20px;
+  background: lawngreen;
+  left: -180px;
+}
 
-                                          div > div:nth-child(n+17):nth-child(odd)::after{
-                                            content: "";
-                                            display: block;
-                                            width: 80px;
-                                            height: 80px;
-                                                      
-                                            background-color: white;
-                                            position: absolute;
-                                            top: 80px;
-                                                       }
-                                                       div > div:nth-child(n+17):nth-child(even)::after{
-                                                           content: "";
-                                                           display: block;
-                                                           width: 80px;
-                                                           height: 80px;
-                                                                     
-                                                           background-color: black;
-                                                           position: absolute;
-                                                           top: 80px;
-                                                                      }
-
-                                                                       /* YES!!! PERFECT! */
-                                                                      div > div:nth-child(2)::before{
-                                                                        position: absolute;
-                                                                        content: "12345678";
-                                                                        letter-spacing: 4.7rem;
-                                                                        width: 640px;
-                                                                        height: 20px;
-                                                                        color: grey;
-                                                                        top: 640px;
-                                                                        background-color: lawngreen;
-                                                                        left: -80px;
-                                                                        font-size: larger;
-                                                                        }
-
-                                                                        /* you have add one big block and add border */
-                                                                        div > div:nth-child(3)::before{
-                                                                           
-                                                                            position: absolute;
-                                                                            content: "";
-                                                                            letter-spacing: 4.7rem;
-                                                                            width: 20px;
-                                                                            height: 680px;
-                                                                            color: grey;
-                                                                            top: -20px;
-                                                                            background-color: lawngreen;
-                                                                            left: -180px;
-                                                                            }
-                                                                            
-
-                                                                            div > div:nth-child(4)::before{
-                                                                               
-                                                                               
-                                                                                position: absolute;
-                                                                                content: "";
-                                                                                letter-spacing: 4.7rem;
-                                                                                width: 20px;
-                                                                                height: 680px;
-                                                                                color: grey;
-                                                                                top: -20px;
-                                                                                background-color: lawngreen;
-                                                                                left: 400px;
-                                                                                }
-                                                                                
-                                                                     
+div > div:nth-child(4)::before {
+  letter-spacing: 4.7rem;
+  width: 20px;
+  height: 680px;
+  color: grey;
+  top: -20px;
+  background: lawngreen;
+  left: 400px;
+}
